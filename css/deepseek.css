@@ -1,0 +1,201 @@
+/* ------------------------------------------------------------- DeepSeek */
+
+.theme-deepseek {
+  --bg: #1b1b1b;
+  --sb: #232323;
+  --hover: rgba(255, 255, 255, 0.07);
+  --text: #e9e9e9;
+  --icon: #c4c4c4;
+  --muted: #8b8b8b;
+  --line: rgba(255, 255, 255, 0.09);
+  --bubble: #2b2b2b;
+  --bubble-r: 16px;
+  --composer: #2b2b2b;
+  --composer-r: 22px;
+  --composer-line: rgba(255, 255, 255, 0.04);
+  --composer-focus: rgba(77, 107, 254, 0.4);
+  --placeholder: #8b8b8b;
+  --send-bg: #4d6bfe;
+  --send-fg: #ffffff;
+  --accent: #4d6bfe;
+  --thread-w: 800px;
+  --gutter: max(20px, calc((100% - 800px) / 2));
+  --msg-size: 15px;
+  --msg-lh: 1.75;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+.theme-deepseek .sidebar { width: 248px; padding: 0 10px; }
+
+.theme-deepseek .sb-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  padding: 0 6px;
+}
+
+.theme-deepseek .sb-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+
+.theme-deepseek .sb-brand svg { width: 21px; height: 21px; color: var(--accent); }
+.theme-deepseek .sb-brand:hover { background: var(--hover); }
+
+.theme-deepseek .new-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 14px;
+  color: #ededed;
+  margin: 4px 0 10px;
+}
+
+.theme-deepseek .new-chat svg { width: 16px; height: 16px; }
+.theme-deepseek .new-chat:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.32); }
+
+.theme-deepseek .sb-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; margin: 0 -4px; padding: 0 4px; }
+
+.theme-deepseek .sb-month {
+  font-size: 12px;
+  color: #8b8b8b;
+  padding: 14px 8px 5px;
+  letter-spacing: 0.01em;
+}
+
+.theme-deepseek .sb-chat {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  color: #d6d6d6;
+  padding: 7px 9px;
+  border-radius: 8px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-deepseek .sb-chat:hover { background: var(--hover); }
+.theme-deepseek .sb-chat.active { background: rgba(255, 255, 255, 0.09); color: #fff; }
+
+.theme-deepseek .sb-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 56px;
+  padding: 0 6px;
+  margin: 0 -10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: auto;
+  text-align: left;
+  border-radius: 0;
+}
+
+.theme-deepseek .sb-user:hover { background: rgba(255, 255, 255, 0.03); }
+
+.theme-deepseek .sb-user .avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #3a3a3a;
+  color: #cfcfcf;
+}
+
+.theme-deepseek .sb-user-meta { flex: 1; min-width: 0; font-size: 13px; color: #e0e0e0; }
+.theme-deepseek .sb-user-meta span { display: block; font-size: 11px; color: #8b8b8b; margin-top: 1px; }
+.theme-deepseek .sb-user > svg { width: 16px; height: 16px; color: #9a9a9a; }
+
+.theme-deepseek .main-head { height: 56px; padding: 0 16px; }
+
+.theme-deepseek .head-title { font-size: 14.5px; font-weight: 500; color: #e9e9e9; }
+
+.theme-deepseek .head-title .head-sub {
+  font-size: 12px;
+  color: #8b8b8b;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.theme-deepseek .hero { text-align: center; margin-bottom: 26px; }
+
+.theme-deepseek .hero h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+}
+
+.theme-deepseek .hero p { margin: 9px 0 0; font-size: 14px; color: #8b8b8b; }
+
+.theme-deepseek .thread { padding-top: 14px; }
+.theme-deepseek .msg { padding: 11px 0; }
+.theme-deepseek .msg-ai .bubble { background: transparent; padding: 0; }
+.theme-deepseek .msg-user .bubble { padding: 10px 15px; }
+
+.theme-deepseek .composer-wrap { padding-bottom: 6px; }
+.theme-deepseek .composer { padding: 13px 12px 10px 16px; }
+.theme-deepseek .composer textarea { font-size: 15.5px; padding-bottom: 10px; }
+
+.theme-deepseek .tool-chips { display: flex; align-items: center; gap: 7px; }
+
+.theme-deepseek .tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 12.5px;
+  color: #cfcfcf;
+}
+
+.theme-deepseek .tool-chip svg { width: 14px; height: 14px; }
+.theme-deepseek .tool-chip:hover { background: rgba(255, 255, 255, 0.06); }
+.theme-deepseek .tool-chip.on {
+  border-color: rgba(77, 107, 254, 0.7);
+  background: rgba(77, 107, 254, 0.15);
+  color: #9db0ff;
+}
+
+.theme-deepseek .composer .attach-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9b9b9;
+}
+
+.theme-deepseek .composer .attach-btn svg { width: 18px; height: 18px; }
+.theme-deepseek .composer .attach-btn:hover { background: rgba(255, 255, 255, 0.08); }
+
+.theme-deepseek .disclaimer { margin-top: 8px; font-size: 11px; color: #7d7d7d; }
+
+.theme-deepseek .thinking i { background: #9db0ff; }
+
+.theme-deepseek .msg-ai .ai-avatar {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.theme-deepseek .msg-ai .ai-avatar svg { width: 20px; height: 20px; }
